@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Nome do Produto</title>
+
+  <!-- Estilos gerais e do Swiper.js -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#nutri">Nutrição</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hero com 3D model viewer -->
+    <section id="hero">
+      <canvas id="modelViewer"></canvas>
+      <h1>Nome do Produto</h1>
+      <p>Breve slogan de impacto</p>
+      <button>Comprar Agora</button>
+    </section>
+
+    <!-- Carrossel de imagens -->
+    <section id="galeria">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images/embalagem.jpg" alt="Embalagem"></div>
+          <div class="swiper-slide"><img src="images/rotulo.jpg" alt="Rótulo"></div>
+          <!-- mais slides aqui -->
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- Descrição de marketing -->
+    <section id="sobre">
+      <h2>Sobre o Produto</h2>
+      <p>Texto de marketing que destaca benefícios e diferenciais.</p>
+    </section>
+
+    <!-- Informação nutricional -->
+    <section id="nutri">
+      <h2>Informação Nutricional</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Componente</th>
+            <th>Porção</th>
+            <th>Valor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Calorias</td>
+            <td>30g</td>
+            <td>120 kcal</td>
+          </tr>
+          <!-- linhas adicionais -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Rótulo em texto -->
+    <section id="rotulo-texto">
+      <h2>Rótulo</h2>
+      <p>Texto completo do rótulo para acessibilidade e SEO.</p>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato">
+      <h2>Fale Conosco</h2>
+      <form>
+        <input type="email" placeholder="Seu e-mail">
+        <textarea placeholder="Sua mensagem"></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Nome da Empresa</p>
+  </footer>
+
+  <!-- Scripts: Three.js, Swiper e código principal -->
+  <script src="https://unpkg.com/three@0.150.0/build/three.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
