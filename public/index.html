@@ -25,27 +25,45 @@
 
   <main>
 
+    <!-- Seu script principal -->
+  <script src="main.js"></script>
+
     <!-- Hero com 3D model viewer -->
-    <section id="hero">
-      <canvas id="modelViewer"></canvas>
-      <h1>Nome do Produto</h1>
-      <p>Breve slogan de impacto</p>
-      <button>Comprar Agora</button>
-    </section>
+<section id="hero">
+  <div class="model-wrapper">
+    <canvas id="modelViewer"></canvas>
+    <p class="hint">Arraste para girar a embalagem</p>
+  </div>
+  <h1>Nome do Produto</h1>
+  <p>Breve slogan de impacto sobre a embalagem 3D</p>
+
+  <!-- Scripts do Three.js -->
+  <script src="https://unpkg.com/three@0.150.0/build/three.min.js"></script>
+<script src="https://unpkg.com/three/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://unpkg.com/three/examples/js/controls/OrbitControls.js"></script>
+
+</section>
 
     <!-- Carrossel de imagens -->
-    <section id="galeria">
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="images/embalagem.jpg" alt="Embalagem"></div>
-          <div class="swiper-slide"><img src="images/rotulo.jpg" alt="Rótulo"></div>
-          <!-- mais slides aqui -->
-        </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-pagination"></div>
-      </div>
-    </section>
+<section id="galeria">
+  <div class="carousel-container">
+    <button class="carousel-btn prev" disabled>‹</button>
+
+    <div class="carousel-track-container">
+      <ul class="carousel-track">
+        <li class="carousel-slide current-slide">
+          <img src="assets/images/embalagem.jpg" alt="Embalagem do produto">
+        </li>
+        <li class="carousel-slide">
+          <img src="assets/images/rotulo.jpg" alt="Rótulo do produto">
+        </li>
+        <!-- repita <li> para cada imagem adicional -->
+      </ul>
+    </div>
+
+    <button class="carousel-btn next">›</button>
+  </div>
+</section>
 
     <!-- Descrição de marketing -->
     <section id="sobre">
