@@ -38,7 +38,7 @@ scene.add(dirLight);
 
 // Carregar modelo GLB
 const loader = new THREE.GLTFLoader();
-loader.load('models/embalagem.gltf', gltf => {
+loader.load('/assets/models/embalagem/scene.gltf', gltf => {
   const model = gltf.scene;
   model.scale.set(1, 1, 1); // ajuste de escala se necessário
   scene.add(model);
