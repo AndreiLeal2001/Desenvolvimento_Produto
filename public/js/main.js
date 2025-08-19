@@ -37,14 +37,19 @@ dirLight.position.set(5, 10, 7.5);
 scene.add(dirLight);
 
 // Carregar modelo GLB
-const loader = new THREE.GLTFLoader();
-loader.load('/assets/models/embalagem/scene.gltf', gltf => {
-  const model = gltf.scene;
-  model.scale.set(1, 1, 1); // ajuste de escala se necessário
-  scene.add(model);
-}, undefined, error => {
-  console.error('Erro ao carregar GLTF:', error);
-});
+const loader = new GLTFLoader();
+loader.load(
+  'https://modelviewer.dev/shared-assets/models/Astronaut.glb',
+  function (gltf) {
+    const model = gltf.scene;
+    model.scale.set(1, 1, 1); // ajuste de escala se necessário
+    scene.add(model);
+  },
+  undefined,
+  function (error) {
+    console.error('Erro ao carregar GLTF:', error);
+  }
+);
 
 // Ajustar viewport em resize
 window.addEventListener('resize', () => {
